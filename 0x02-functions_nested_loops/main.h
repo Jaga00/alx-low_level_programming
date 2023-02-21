@@ -13,4 +13,7 @@ void print_alphabet_x10(void);
 /* 3-islower.c */
 int _islower(int);
 
+/* 4-alpha.c */
+int _isalpha(int);
+
 #endif
