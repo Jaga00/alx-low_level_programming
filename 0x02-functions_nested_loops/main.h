@@ -19,4 +19,7 @@ int _isalpha(int);
 /* 5-sign.c */
 int print_sign(int);
 
+/* 6-abs.c */
+int _abs(int);
+
 #endif
