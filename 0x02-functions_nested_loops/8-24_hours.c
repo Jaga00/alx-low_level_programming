@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * description- 24hr for Jack bauer
+ * jack_bauer - prints a 24 hour timer
  */
 
 void jack_bauer(void)
