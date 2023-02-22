@@ -16,4 +16,7 @@ int _islower(int);
 /* 4-alpha.c */
 int _isalpha(int);
 
+/* 5-sign.c */
+int print_sign(int);
+
 #endif
