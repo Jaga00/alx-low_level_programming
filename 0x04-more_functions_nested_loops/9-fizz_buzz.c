@@ -30,9 +30,15 @@ int main(void)
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%i", i);
 		}
+		if (i != 100)
+		{
+			putchar(' ');
+		}
+
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
