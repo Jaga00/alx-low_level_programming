@@ -1,13 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Fizz Buzz code
  *
- * Description: 'replaces multiples of 3 with "Fizz"'
- * 'replaces multiples of 5 with "Buzz"'
- * 'replaces multiples of both three and five with "FizzBuzz"'
- *
- * Return: Always 0 (Success)
+ * Return: void
  */
 
 int main(void)
