@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Fizz Buzz
+ * main - Fizz Buzz code
  *
- * Return: 0
+ * Return: void
  */
 
 int main(void)
