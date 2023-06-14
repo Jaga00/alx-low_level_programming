@@ -5,8 +5,8 @@
 /**
  * argstostr - concatenates all the command-line arguments of program
  * into a single string.
- * @ac - number of command-line arguments.
- * @av - array of strings representing the command-line arguments.
+ * @ac - number of arguments passed to the program.
+ * @av - array of strings containing the arguments.
  *
  * Return - NULL if ac == 0 or av == NULL
  *          Otherwise  a pointer to a new string, or NULL if it fails
@@ -17,7 +17,8 @@ char  *argstostr(int ac, char **av)
 	int tole = 0;
 	int i;
 	int in = 0;
-	char *result = (char *)malloc(sizeof(char) * tole);
+	int j = 0;
+	char *str;
 
 	if (ac == 0 || av == NULL)
 	{
@@ -26,22 +27,28 @@ char  *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		tole += strlen(av[i]) + 1;
+		for (in = 0; av[i][in] != '\0'; in++)
+			tole++;
 	}
 
-	if (result == NULL)
-		{
-			return (NULL);
-		}
+	str = malloc(sizeof(char) * tole);
 
-		for (i = 0; i < ac; i++)
-		{
-			strcpy(result + in, av[i]);
-			in += strlen(av[i]);
-			result[in] = '\n';
-			in++;
-		}
-		result[in - 1] = '\0';
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
-		return (result);
-}	
+	for (i = 0; i < ac; i++)
+	{
+		for (in = 0; av[i][in] != '\0'; in++)
+		{
+			str[j] = av[i][in];
+			j++;
+		}
+		str[j] = '\n';
+		j++;
+	}
+	str[j] = '\0';
+
+	return (str);
+}
